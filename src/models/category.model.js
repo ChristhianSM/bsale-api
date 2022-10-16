@@ -1,9 +1,9 @@
 const knex = require('knex');
-const { config } = require('../database/mysql/config');
+const { config } = require('../database/config');
 
-class Product {
+class Category {
   constructor() {
-    this.nameTable = 'CATEGORY';
+    this.nameTable = 'category';
     this.database = knex(config);
   }
 
@@ -35,4 +35,4 @@ class Product {
 
 }
 
-module.exports = Product;
+module.exports = Category;

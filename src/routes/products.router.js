@@ -1,18 +1,13 @@
 const { Router } = require('express');
-const { check } = require('express-validator');
 
-const { obtenerProductos,
-        obtenerProducto, } = require('../controllers/productos');
+const { getAll, getProductById } = require('../controllers/products.controller');
 
 const router = Router();
 
-//  Obtener todas las categorias - publico
-router.get('/', obtenerProductos );
+//  Obtener todos los productos - publico
+router.get('/', getAll );
 
-// Obtener una categoria por id - publico
-router.get('/:id',[
-    // check('id').custom( existeProductoPorId ),
-    // validarCampos,
-], obtenerProducto );
+// Obtener un producto por id - publico
+router.get('/:id', getProductById );
 
 module.exports = router;

@@ -12,10 +12,6 @@ class Server {
             products:  '/api/products',
         }
 
-
-        // Conectar a base de datos
-        this.conectarDB();
-
         // Middlewares
         this.middlewares();
 
@@ -24,7 +20,6 @@ class Server {
     }
 
     middlewares() {
-
         // CORS
         this.app.use( cors() );
 
@@ -33,12 +28,11 @@ class Server {
 
         // Directorio Público
         this.app.use( express.static('public') );
-
     }
 
     routes() {
-        this.app.use( this.paths.categories, require('../routes/categories'));
-        this.app.use( this.paths.products, require('../routes/products'));
+        this.app.use( this.paths.categories, require('../routes/categories.router'));
+        this.app.use( this.paths.products, require('../routes/products.router'));
     }
 
     listen() {
