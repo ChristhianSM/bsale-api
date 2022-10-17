@@ -4,7 +4,6 @@ const Product = require("../models/product.model");
 const Producto = new Product();
 
 const getAll = async (req = request, res = response) => {
-  console.log("Entrooo")
   try {
     const products = await Producto.getAll();
     res.status(200).send({

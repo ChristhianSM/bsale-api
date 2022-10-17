@@ -2,6 +2,9 @@
 
 API, desarrollada usando Nodejs y Mysql con el objetivo de obtener los productos y las categorias de una licoreria.
 
+### Documentación de la Api
+* https://documenter.getpostman.com/view/13410793/2s847CxvZx
+
 ### 1. API
 
 La API expone los siguientes endpoints:
@@ -12,12 +15,12 @@ La API expone los siguientes endpoints:
 * `GET /api/products`
 
 ##### Obtener todas las categorias
-* `GET /api/:id`
+* `GET /api/categories`
 
 ##### Obtener todos los productos de una determinada categoria
 * `GET /api/products/category/idCategory`
 
-##### Obtener todos los productos de acuerdo aun criterio de busqueda
+##### Obtener todos los productos de acuerdo a un criterio de busqueda
 * `POST /api/products`
 
 ## 2. Objetivos Logrados
@@ -27,13 +30,11 @@ como herramienta para desarrollar _aplicaciones de servidor_, junto con una
 serie de herramientas comunes usadas en este tipo de contexto (Express como
 framework, MySQL como base datos, y Knex como ORM).
 
-En este proyecto tendrás que construir un servidor web que debe _servir_ `JSON`
-sobre `HTTP`.
-
 ### Node
 
 * [ ] Instalar y usar modules
 * [ ] `npm scripts`
+* [ ] Variables de entorno
 
 ### Express
 
@@ -50,11 +51,6 @@ sobre `HTTP`.
 * [ ] Codigos de status de HTTP
 * [ ] Encodings y `JSON`
 * [ ] CORS
-
-
-### Frontend Development
-
-* [ ] Variables de entorno
 
 ### MySQL
 
