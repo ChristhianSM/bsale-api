@@ -39,7 +39,44 @@ const getProductById = async (req = request, res = response) => {
   }
 }
 
+const getProductByCategory = async (req = request, res = response) => {
+  const idCategory = parseInt(req.params.idCategory);
+  try {
+    const data = await Producto.getProductsByCategory(idCategory);
+    res.status(200).send({
+      status: 200,
+      data,
+      message: 'product was obtained successfully',
+    });
+  } catch (error) {
+    res.status(500).send({
+      status: 500,
+      messages: error.message,
+    });
+  }
+}
+
+const getProductsByQuery = async (req = request, res = response) => {
+  const { query } = req.body;
+  try {
+    const data = await Producto.getProductsByQuery(query);
+    res.status(200).send({
+      status: 200,
+      data,
+      message: 'product was obtained successfully',
+    });
+  } catch (error) {
+    res.status(500).send({
+      status: 500,
+      messages: error.message,
+    });
+  }
+}
+
+
 module.exports = {
   getAll,
-  getProductById
+  getProductById,
+  getProductByCategory,
+  getProductsByQuery
 }

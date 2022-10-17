@@ -1,10 +1,12 @@
+require('dotenv').config();
+
 const config = {
   client: 'mysql',
   connection: {
-    host: 'mdb-test.c6vunyturrl6.us-west-1.rds.amazonaws.com',
-    user: 'bsale_test',
-    password: 'bsale_test',
-    database: 'bsale_test',
+    host: process.env.HOSTDB,
+    user: process.env.USERDB,
+    password: process.env.PASSWORDDB,
+    database: process.env.DATABASE,
   },
 };
 module.exports = { config };
