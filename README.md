@@ -2,25 +2,25 @@
 
 API, desarrollada usando Nodejs y Mysql con el objetivo de obtener los productos y las categorias de una licoreria.
 
-### 1.1 API
+### 1. API
 
 La API expone los siguientes endpoints:
 
-#### 1.1.1 `/api`
+#### `/api`
 
-# Obtener todos los productos
+##### Obtener todos los productos
 * `GET /api/products`
 
-# Obtener todas las categorias
+##### Obtener todas las categorias
 * `GET /api/:id`
 
-# Obtener todos los productos de una determinada categoria
+##### Obtener todos los productos de una determinada categoria
 * `GET /api/products/category/idCategory`
 
-# Obtener todos los productos de acuerdo aun criterio de busqueda
+##### Obtener todos los productos de acuerdo aun criterio de busqueda
 * `POST /api/products`
 
-## 3. Objetivos Logrados
+## 2. Objetivos Logrados
 
 Los objetivos que se lograron fueron adquirir experiencia con **Node.js**
 como herramienta para desarrollar _aplicaciones de servidor_, junto con una
