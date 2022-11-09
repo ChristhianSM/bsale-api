@@ -17,7 +17,7 @@ Ir a la carpeta del proyecto
   cd bsale-api/
 ```
 
-Abrir el proyecto el Visual Studio Code y cree el archivo .env (variables de entorno), en este proyecto se encuentra el archivo .env.example, donde se podra guiar de las variables necesarias para correr ejecutar el proeycto.
+Abrir el proyecto el Visual Studio Code y cree el archivo .env (variables de entorno), en este proyecto se encuentra el archivo .env.example, donde se podra guiar de las variables necesarias para correr ejecutar el proyecto.
 
 Instalar las dependencias
 
@@ -33,6 +33,18 @@ Correr el servidor
 
 Abrir un navegador web o puede usar Postman/Insonmia para realizar las peticiones: ```http://localhost:{port}/api/products```.
 
+### Estructura del proyecto
+
+    .
+    ├── src
+        ├── controllers     # Archivos que se encargan de manejar solicitudes entrantes, devuelven respuesta al cliente
+        ├── database        # Archivos de configuracion DB
+        ├── models          # Archivos que representan una entidad en la Base de datos
+        ├── routes          # Archivo de rutas para los endpoints
+    │   └── index.js
+    ├── .env.example
+    ├── .gitignore
+    └── README.md
 
 ### 1. API
 
