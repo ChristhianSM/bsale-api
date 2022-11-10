@@ -2,6 +2,20 @@
 
 API, desarrollada usando Nodejs y Mysql con el objetivo de obtener los productos y las categorias de un ecommerce.
 
+### Explicacion del proyecto
+Se planteo construir una tienda virtual con productos que se encuentran alojados en una base de datos mysql para lo cual se contruyo esta REST API para gestionar los endpoints los cuales seran consumidos por los usuarios por parte del front, esta API cuenta con 3 enpoints los cuales son para obtener todos los productos, obtener todas las categorias, obtener todos los productos de acuerdo a una determinada categoria y obtener todos los productos de acuerdo a un termino de busqueda. Todos los endpoints devuelven la siguiente respuesta : 
+```
+Json
+{
+    "status": 200,
+    "data": [],
+    "message": "product was obtained successfully"
+}
+```
+* status: El estado de la peticion, tiene 2 estados 200 y 500.
+* data : Aqui se encuentra los datos para ser consumidos por el front.
+* message: Mensaje para ser mostrado en el front.
+
 ### Documentación de la Api
 * https://documenter.getpostman.com/view/13410793/2s847CxvZx
 
